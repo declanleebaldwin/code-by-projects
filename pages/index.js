@@ -8,7 +8,14 @@ export default function Home() {
         <meta name="description" content="Code By Projects" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className="text-3xl font-bold underline text-purple">Hello world!</h1>
+      <div id="main" className="absolute top-0 left-0 bottom-0 right-0">
+        <div className="relative p-8 h-full w-full">
+          <div
+            className="bg-gray-600 m-auto h-full rounded-xl"
+            style={{ width: "50%" }}
+          ></div>
+        </div>
+      </div>
     </div>
   );
 }

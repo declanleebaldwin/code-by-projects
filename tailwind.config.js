@@ -9,13 +9,14 @@ module.exports = {
       gray: {
         400: "#292934",
         600: "#252530",
-        800: "#1C1C26"
-      }
+        800: "#1C1C26",
+      },
     },
     extend: {
       backgroundImage: {
-        'landing': "linear-gradient(to top, rgba(28,28,38,0.922), rgba(28,28,38,0.922)), url('/bg.svg')"
-      }
+        landing:
+          "linear-gradient(to top, rgba(28,28,38,0.922), rgba(28,28,38,0.922)), url('/bg.svg')",
+      },
     },
   },
   plugins: [],
