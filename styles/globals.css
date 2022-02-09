@@ -14,18 +14,17 @@ body {
 
 @keyframes slideIn {
   from {
-    top: 5rem;
+    transform: translateY(50px);
     opacity: 0;
   }
 
   to {
-    top: 0;
+    transform: translateY(0px);
     opacity: 1;
   }
 }
-
-#main {
+/* #main {
   animation-duration: 1.5s;
   animation-name: slideIn;
   animation-fill-mode: forwards;
-}
+} */
