@@ -32,3 +32,9 @@ body {
   animation-name: slideIn;
   animation-fill-mode: forwards;
 } */
+
+@layer utilities {
+  .box-shadow-inner {
+    box-shadow: 0 0 0 1px #8d7dff, inset 0 0 0 1px #8d7dff;
+  }
+}

@@ -1,7 +1,9 @@
 import Head from "next/head";
 import Image from "next/image";
-
+import { useState } from "react";
 export default function Home() {
+  const [email, setEmail] = useState("");
+  const [focus, setFocus] = useState(true);
   return (
     <div>
       <Head>
@@ -11,7 +13,7 @@ export default function Home() {
       </Head>
       <div
         id="main"
-        className="relative bg-gray-600 m-auto h-full w-full md:w-[45rem] rounded-xl text-white font-light md:mt-8 md:mb-8"
+        className="relative bg-gray-600 m-auto h-full w-full md:w-[45rem] md:rounded-xl text-white font-light md:mt-8 md:mb-8"
       >
         <div className="flex w-full">
           <div className="flex flex-col font-extrabold text-4xl md:text-6xl pt-16 pl-16 pr-16">
@@ -79,7 +81,20 @@ export default function Home() {
                 />
               </div>
               <div className="text-gray-500 text-base flex-1">
-                From £50/project, trial out the first ticket for free.
+                From £50/project.
+              </div>
+            </div>
+            <div className="flex items-center mb-2">
+              <div className="w-6 h-6 relative border-2 border-white border-solid rounded-full mr-4">
+                <Image
+                  objectFit="cover"
+                  src="/chevron_right.svg"
+                  layout="fill"
+                  alt="chevron-right"
+                />
+              </div>
+              <div className="text-gray-500 text-base flex-1">
+                Trial out your first ticket for free.
               </div>
             </div>
             <div className="flex items-center">
@@ -92,7 +107,7 @@ export default function Home() {
                 />
               </div>
               <div className="text-gray-500 text-base flex-1">
-                Mentor session £50/hour
+                Mentor session £50/hour.
               </div>
             </div>
           </div>
@@ -103,8 +118,22 @@ export default function Home() {
           <div className="text-gray-500 text-base mb-4">
             Start your first project for free.
           </div>
-          <div className="text-gray-500 text-base mb-4">
+          <div className="text-gray-500 text-base mb-8">
             Sign up and we’ll email you your first ticket.
+          </div>
+          <div className="relative mb-8">
+            <input
+              className="focus:outline-none focus:box-shadow-inner w-full bg-gray-400 pt-0 pb-0 pl-6 text-gray-300 placeholder:text-gray-300 text-base rounded-lg h-[4.25rem]"
+              type="text"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email Address"
+            ></input>
+          </div>
+          <div className="bg-purple flex items-center justify-center rounded-lg cursor-pointer h-[4.25rem]">
+            <div className="text-white uppercase font-semibold text-base tracking-wider">
+              join project
+            </div>
           </div>
         </div>
         <div className="bg-gray-200 w-full mt-12 mb-12 h-0.5"></div>

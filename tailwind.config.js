@@ -4,10 +4,16 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    extend: {
+      boxShadow: {
+        inner: "0 0 0 1px #8d7dff, inset 0 0 0 1px #8d7dff",
+      },
+    },
     colors: {
       purple: "#8D7DFF",
       gray: {
         200: "#ffffff12",
+        300: "#ffffff5e",
         400: "#292934",
         500: "#ffffffb5",
         600: "#252530",
