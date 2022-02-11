@@ -44,9 +44,25 @@ export default function Home() {
             and will have a set of requirements you need to fulfill.
           </div>
           <div className="text-gray-500 text-base">
+            Each ticket will help you develop your skills as a web developer and
+            most importantly help you become self reliant when it comes to
+            solving problems.
+          </div>
+        </div>
+        <div className="bg-gray-200 w-full mt-12 mb-12 h-0.5"></div>
+        <div className="flex flex-col pl-16 pr-16">
+          <div className="font-bold text-xl uppercase mb-6">mentors</div>
+          <div className="text-gray-500 text-base mb-4">
             Don’t worry if you get stuck, there will be plenty of help along the
-            way. You will be assigned a mentor - this is supposed to replicate
-            having a senior developer in a real job.
+            way.
+          </div>
+          <div className="text-gray-500 text-base mb-4">
+            You will be assigned a mentor - this is supposed to replicate having
+            a senior developer in a real job.
+          </div>
+          <div className="text-gray-500 text-base">
+            With your mentor you can discuss your tickets, ask for code reviews
+            or even go over a web development topic you are struggling with.
           </div>
         </div>
         <div className="bg-gray-200 w-full mt-12 mb-12 h-0.5"></div>
