@@ -11,10 +11,10 @@ export default function Home() {
       </Head>
       <div
         id="main"
-        className="relative bg-gray-600 m-auto h-full w-full md:w-[45rem] rounded-xl text-white font-light mt-8 mb-8"
+        className="relative bg-gray-600 m-auto h-full w-full md:w-[45rem] rounded-xl text-white font-light md:mt-8 md:mb-8"
       >
         <div className="flex w-full">
-          <div className="flex flex-col font-extrabold text-6xl pt-16 pl-16 pr-16">
+          <div className="flex flex-col font-extrabold text-4xl md:text-6xl pt-16 pl-16 pr-16">
             <span className="mb-4">Escape Tutorial Hell.</span>
             <span className="mb-4">
               Build <span className="bg-purple">Projects.</span>
@@ -56,24 +56,26 @@ export default function Home() {
             <div className="flex items-center mb-2">
               <div className="w-6 h-6 relative border-2 border-white border-solid rounded-full mr-4">
                 <Image
+                  objectFit="cover"
                   src="/chevron_right.svg"
                   layout="fill"
                   alt="chevron-right"
                 />
               </div>
-              <div className="text-gray-500 text-base">
+              <div className="text-gray-500 text-base flex-1">
                 From £50/project, trial out the first ticket for free.
               </div>
             </div>
             <div className="flex items-center">
               <div className="w-6 h-6 relative border-2 border-white border-solid rounded-full mr-4">
                 <Image
+                  objectFit="cover"
                   src="/chevron_right.svg"
                   layout="fill"
                   alt="chevron-right"
                 />
               </div>
-              <div className="text-gray-500 text-base">
+              <div className="text-gray-500 text-base flex-1">
                 Mentor session £50/hour
               </div>
             </div>

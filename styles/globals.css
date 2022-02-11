@@ -5,6 +5,12 @@ body {
   font-family: Inter;
 }
 
+@media (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -14,17 +20,15 @@ body {
 
 @keyframes slideIn {
   from {
-    transform: translateY(50px);
     opacity: 0;
   }
 
   to {
-    transform: translateY(0px);
     opacity: 1;
   }
 }
 /* #main {
-  animation-duration: 1.5s;
+  animation-duration: 0.5s;
   animation-name: slideIn;
   animation-fill-mode: forwards;
 } */
