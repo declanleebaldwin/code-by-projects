@@ -15,8 +15,8 @@ export default function Home() {
       >
         <div className="flex w-full">
           <div className="flex flex-col font-extrabold text-4xl md:text-6xl pt-16 pl-16 pr-16">
-            <span className="mb-4">Escape Tutorial Hell.</span>
-            <span className="mb-4">
+            <span className="mb-1 md:mb-4">Escape Tutorial Hell.</span>
+            <span className="mb-1 md:mb-4">
               Build <span className="bg-purple">Projects.</span>
             </span>
             <span>Get Hired.</span>
