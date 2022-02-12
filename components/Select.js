@@ -20,16 +20,22 @@ const Select = ({ items, selected, placeholder, onSelected }) => {
     <div className="relative mb-8">
       <div
         onClick={openSelect}
-        className="relative flex items-center cursor-pointer w-full bg-gray-400 pt-0 pb-0 pl-6 text-gray-300 text-base rounded-lg h-[4.25rem]"
+        className={
+          open
+            ? "shadow-inner relative flex items-center cursor-pointer w-full bg-gray-400 pt-0 pb-0 pl-6 text-gray-300 text-base rounded-lg h-[4.25rem]"
+            : "relative flex items-center cursor-pointer w-full bg-gray-400 pt-0 pb-0 pl-6 text-gray-300 text-base rounded-lg h-[4.25rem]"
+        }
       >
         {selected ?? placeholder}
         <div className="w-6 h-6 absolute right-6">
-          <Image
-            objectFit="cover"
-            src="/expand_more.svg"
-            layout="fill"
-            alt="expand-more"
-          />
+          <div className="relative w-full h-full">
+            <Image
+              objectFit="cover"
+              src="/expand_more.svg"
+              layout="fill"
+              alt="expand-more"
+            />
+          </div>
         </div>
       </div>
       {open && (

@@ -1,15 +1,23 @@
 import Head from "next/head";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Select } from "../components";
+import { useFilteredProjects } from "../hooks";
 const technologies = ["All", "HTML / CSS", "JavaScript", "React"];
 
 export default function Home() {
   const [email, setEmail] = useState("");
   const [technology, setTechnology] = useState();
+  const [project, setProject] = useState();
+  const filteredProjects = useFilteredProjects({ technology });
 
   const selectTechnology = (item) => {
+    setProject();
     setTechnology(item);
+  };
+
+  const selectProject = (item) => {
+    setProject(item);
   };
   return (
     <div>
@@ -134,6 +142,15 @@ export default function Home() {
             onSelected={selectTechnology}
             placeholder="Technology"
           />
+
+          {filteredProjects && (
+            <Select
+              items={filteredProjects}
+              selected={project}
+              onSelected={selectProject}
+              placeholder="Project"
+            />
+          )}
           <div className="relative mb-8">
             <input
               className="focus:outline-none focus:shadow-inner w-full bg-gray-400 pt-0 pb-0 pl-6 text-gray-300 placeholder:text-gray-300 text-base rounded-lg h-[4.25rem]"
