@@ -1,9 +1,16 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
+import { Select } from "../components";
+const technologies = ["All", "HTML / CSS", "JavaScript", "React"];
+
 export default function Home() {
   const [email, setEmail] = useState("");
-  const [focus, setFocus] = useState(true);
+  const [technology, setTechnology] = useState();
+
+  const selectTechnology = (item) => {
+    setTechnology(item);
+  };
   return (
     <div>
       <Head>
@@ -121,9 +128,15 @@ export default function Home() {
           <div className="text-gray-500 text-base mb-8">
             Sign up and we’ll email you your first ticket.
           </div>
+          <Select
+            items={technologies}
+            selected={technology}
+            onSelected={selectTechnology}
+            placeholder="Technology"
+          />
           <div className="relative mb-8">
             <input
-              className="focus:outline-none focus:box-shadow-inner w-full bg-gray-400 pt-0 pb-0 pl-6 text-gray-300 placeholder:text-gray-300 text-base rounded-lg h-[4.25rem]"
+              className="focus:outline-none focus:shadow-inner w-full bg-gray-400 pt-0 pb-0 pl-6 text-gray-300 placeholder:text-gray-300 text-base rounded-lg h-[4.25rem]"
               type="text"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
