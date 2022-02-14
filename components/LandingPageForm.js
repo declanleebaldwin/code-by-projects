@@ -51,6 +51,7 @@ const LandingPageForm = () => {
       action="/thanks/"
       data-netlify="true"
       ref={formRef}
+      onSubmit={handleSubmit}
     >
       <input type="hidden" name="form-name" value="contact" />
       <div className="font-bold text-xl uppercase mb-6">join</div>
@@ -77,6 +78,7 @@ const LandingPageForm = () => {
       )}
       <div className="relative mb-8">
         <input
+          name="email"
           className="focus:outline-none focus:shadow-inner w-full bg-gray-400 pt-0 pb-0 pl-6 text-gray-300 placeholder:text-gray-300 text-base rounded-lg h-[4.25rem]"
           type="text"
           value={email}
@@ -86,7 +88,7 @@ const LandingPageForm = () => {
       </div>
       <div className="bg-purple flex items-center justify-center rounded-lg cursor-pointer h-[4.25rem]">
         <button
-          onClick={handleSubmit}
+          type="submit"
           className="text-white uppercase font-semibold text-base tracking-wider"
         >
           join project
