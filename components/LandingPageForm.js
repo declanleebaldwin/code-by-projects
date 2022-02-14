@@ -54,6 +54,8 @@ const LandingPageForm = () => {
       onSubmit={handleSubmit}
     >
       <input type="hidden" name="form-name" value="contact" />
+      <input type="hidden" name="technology" value={technology ?? ""} />
+      <input type="hidden" name="project" value={project ?? ""} />
       <div className="font-bold text-xl uppercase mb-6">join</div>
       <div className="text-gray-500 text-base mb-4">
         Start your first project for free.
