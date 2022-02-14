@@ -1,24 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
-import { useState, useEffect } from "react";
-import { Select } from "../components";
-import { useFilteredProjects } from "../hooks";
-const technologies = ["All", "HTML / CSS", "JavaScript", "React"];
+import { LandingPageForm } from "../components";
 
 export default function Home() {
-  const [email, setEmail] = useState("");
-  const [technology, setTechnology] = useState();
-  const [project, setProject] = useState();
-  const filteredProjects = useFilteredProjects({ technology });
-
-  const selectTechnology = (item) => {
-    setProject();
-    setTechnology(item);
-  };
-
-  const selectProject = (item) => {
-    setProject(item);
-  };
   return (
     <div>
       <Head>
@@ -128,44 +112,7 @@ export default function Home() {
           </div>
         </div>
         <div className="bg-gray-200 w-full mt-12 mb-12 h-0.5"></div>
-        <div className="flex flex-col pl-16 pr-16">
-          <div className="font-bold text-xl uppercase mb-6">join</div>
-          <div className="text-gray-500 text-base mb-4">
-            Start your first project for free.
-          </div>
-          <div className="text-gray-500 text-base mb-8">
-            Sign up and we’ll email you your first ticket.
-          </div>
-          <Select
-            items={technologies}
-            selected={technology}
-            onSelected={selectTechnology}
-            placeholder="Technology"
-          />
-
-          {filteredProjects && (
-            <Select
-              items={filteredProjects}
-              selected={project}
-              onSelected={selectProject}
-              placeholder="Project"
-            />
-          )}
-          <div className="relative mb-8">
-            <input
-              className="focus:outline-none focus:shadow-inner w-full bg-gray-400 pt-0 pb-0 pl-6 text-gray-300 placeholder:text-gray-300 text-base rounded-lg h-[4.25rem]"
-              type="text"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              placeholder="Email Address"
-            ></input>
-          </div>
-          <div className="bg-purple flex items-center justify-center rounded-lg cursor-pointer h-[4.25rem]">
-            <div className="text-white uppercase font-semibold text-base tracking-wider">
-              join project
-            </div>
-          </div>
-        </div>
+        <LandingPageForm />
         <div className="bg-gray-200 w-full mt-12 mb-12 h-0.5"></div>
         <div className="flex flex-col pl-16 pr-16 pb-16">
           <div className="font-bold text-xl uppercase mb-6">reach out</div>
