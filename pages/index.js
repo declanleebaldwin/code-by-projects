@@ -116,6 +116,38 @@ export default function Home() {
         <div className="bg-gray-200 w-full mt-12 mb-12 h-0.5"></div>
         <div className="flex flex-col pl-16 pr-16 pb-16">
           <div className="font-bold text-xl uppercase mb-6">reach out</div>
+          <div className="flex">
+            <div className="mr-6 flex justify-center items-center h-14 w-14 hover:bg-purple-400 bg-purple-500 rounded-full cursor-pointer">
+              <div className="relative w-4/6 h-4/6">
+                <Image
+                  objectFit="cover"
+                  src="/mail.svg"
+                  layout="fill"
+                  alt="mail"
+                />
+              </div>
+            </div>
+            <div className="mr-6 flex justify-center items-center h-14 w-14 hover:bg-purple-400 bg-purple-500 rounded-full cursor-pointer">
+              <div className="relative w-4/6 h-4/6">
+                <Image
+                  objectFit="cover"
+                  src="/discord.svg"
+                  layout="fill"
+                  alt="discord"
+                />
+              </div>
+            </div>
+            <div className="flex justify-center items-center h-14 w-14 hover:bg-purple-400 bg-purple-500 rounded-full cursor-pointer">
+              <div className="relative w-1/2 h-1/2">
+                <Image
+                  objectFit="cover"
+                  src="/twitter.svg"
+                  layout="fill"
+                  alt="twitter"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
