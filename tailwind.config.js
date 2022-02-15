@@ -5,7 +5,10 @@ module.exports = {
   ],
   theme: {
     colors: {
-      purple: "#8D7DFF",
+      purple: {
+        400: "#8D7DFF",
+        500: "#7163D6",
+      },
       gray: {
         200: "#ffffff12",
         300: "#ffffff5e",

@@ -18,7 +18,7 @@ export default function Home() {
           <div className="flex flex-col font-extrabold text-4xl md:text-6xl pt-16 pl-16 pr-16">
             <span className="mb-1 md:mb-4">Escape Tutorial Hell.</span>
             <span className="mb-1 md:mb-4">
-              Build <span className="bg-purple">Projects.</span>
+              Build <span className="bg--400">Projects.</span>
             </span>
             <span>Get Hired.</span>
           </div>
@@ -93,7 +93,7 @@ export default function Home() {
                 />
               </div>
               <div className="text-gray-500 text-base flex-1">
-                Trial out your first ticket for free.
+                Try your first ticket for free.
               </div>
             </div>
             <div className="flex items-center">
