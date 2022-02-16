@@ -128,7 +128,7 @@ const LandingPageForm = () => {
       <div
         className={
           loading
-            ? "relative ease-in-out duration-300  bg-purple-500 flex items-center justify-center rounded-lg h-[4.25rem]"
+            ? "relative ease-in-out duration-300 bg-purple-500 flex items-center justify-center rounded-lg h-[4.25rem]"
             : "relative ease-in-out duration-300 hover:bg-purple-400 bg-purple-500 flex items-center justify-center rounded-lg cursor-pointer h-[4.25rem]"
         }
       >

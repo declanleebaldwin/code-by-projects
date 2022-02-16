@@ -33,3 +33,6 @@ body {
   animation-fill-mode: forwards;
 } */
 
+.link:hover > span {
+  width: 100%;
+}
