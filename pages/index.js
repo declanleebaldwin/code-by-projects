@@ -25,7 +25,7 @@ export default function Home() {
         </div>
         <div className="bg-gray-200 w-full mt-12 mb-12 h-0.5"></div>
         <div className="flex flex-col pl-16 pr-16">
-          <div className="font-bold text-xl uppercase mb-6">how it works?</div>
+          <div className="font-bold text-xl uppercase mb-6 tracking-wider">how it works?</div>
           <div className="text-gray-500 text-base mb-4">
             Code by Projects is a personalised mentor programme which teaches
             you the skills you need to get hired in a real web developer role.
@@ -36,7 +36,7 @@ export default function Home() {
         </div>
         <div className="bg-gray-200 w-full mt-12 mb-12 h-0.5"></div>
         <div className="flex flex-col pl-16 pr-16">
-          <div className="font-bold text-xl uppercase mb-6">projects</div>
+          <div className="font-bold text-xl uppercase mb-6 tracking-wider">projects</div>
           <div className="text-gray-500 text-base mb-4">
             Each project is broken down into tickets.
           </div>
@@ -52,7 +52,7 @@ export default function Home() {
         </div>
         <div className="bg-gray-200 w-full mt-12 mb-12 h-0.5"></div>
         <div className="flex flex-col pl-16 pr-16">
-          <div className="font-bold text-xl uppercase mb-6">mentors</div>
+          <div className="font-bold text-xl uppercase mb-6 tracking-wider">mentors</div>
           <div className="text-gray-500 text-base mb-4">
             Don’t worry if you get stuck, there will be plenty of help along the
             way.
@@ -68,7 +68,7 @@ export default function Home() {
         </div>
         <div className="bg-gray-200 w-full mt-12 mb-12 h-0.5"></div>
         <div className="flex flex-col pl-16 pr-16">
-          <div className="font-bold text-xl uppercase mb-6">pricing</div>
+          <div className="font-bold text-xl uppercase mb-6 tracking-wider">pricing</div>
           <div className="flex flex-col">
             <div className="flex items-center mb-2">
               <div className="w-6 h-6 relative border-2 border-white border-solid rounded-full mr-4">
@@ -115,7 +115,7 @@ export default function Home() {
         <LandingPageForm />
         <div className="bg-gray-200 w-full mt-12 mb-12 h-0.5"></div>
         <div className="flex flex-col pl-16 pr-16 pb-16">
-          <div className="font-bold text-xl uppercase mb-6">reach out</div>
+          <div className="font-bold text-xl uppercase mb-6 tracking-wider">reach out</div>
           <div className="flex">
             <div className="mr-6 flex justify-center items-center h-14 w-14 hover:bg-purple-400 bg-purple-500 rounded-full cursor-pointer">
               <div className="relative w-4/6 h-4/6">
