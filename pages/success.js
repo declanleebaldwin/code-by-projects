@@ -16,9 +16,11 @@ export default function Success() {
           <div className="font-bold text-xl uppercase mb-6 tracking-wider">
             Project Joined!
           </div>
+          <div className="text-gray-500 text-base mb-4">
+            Thank you for signing up to Code by Projects.
+          </div>
           <div className="text-gray-500 text-base">
-            Thanks for signing up for Code by Projects. You will receive an
-            email shortly with details of your first ticket.
+            You will receive an email shortly with details of your first ticket.
           </div>
         </div>
       </div>
