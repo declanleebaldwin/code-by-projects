@@ -1,20 +1,16 @@
 import Head from "next/head";
 import Image from "next/image";
 import { LandingPageForm, MyLink } from "../components";
-import Link from "next/link";
 
 export default function Home() {
   return (
-    <div>
+    <div id="main" className="relative">
       <Head>
         <title>Code By Projects</title>
         <meta name="description" content="Code By Projects" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div
-        id="main"
-        className="relative bg-gray-600 m-auto h-full w-full md:w-[45rem] md:rounded-xl text-white font-light md:mt-8 md:mb-8"
-      >
+      <div className="bg-gray-600 m-auto h-full w-full md:w-[45rem] md:rounded-xl text-white font-light md:mt-8 md:mb-8">
         <div className="flex w-full">
           <div className="flex flex-col font-extrabold text-4xl md:text-6xl pt-16 pl-16 pr-16">
             <span className="mb-1 md:mb-4">Escape Tutorial Hell.</span>
@@ -30,7 +26,7 @@ export default function Home() {
             how it works?
           </div>
           <div className="text-gray-500 text-base mb-4">
-            Code by Projects is a personalised mentor programme which teaches
+            Code By Projects is a personalised mentor programme which teaches
             you the skills you need to get hired in a real web developer role.
           </div>
           <div className="text-gray-500 text-base">
@@ -126,7 +122,7 @@ export default function Home() {
         <LandingPageForm />
         <div className="bg-gray-200 w-full mt-12 mb-12 h-0.5"></div>
         <div className="flex flex-col pl-16 pr-16 pb-16">
-          <div className="font-bold text-xl uppercase mb-6 tracking-wider">
+          <div className="font-bold text-xl uppercase mb-8 tracking-wider">
             reach out
           </div>
           <div className="flex">

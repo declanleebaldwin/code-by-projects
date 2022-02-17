@@ -17,7 +17,7 @@ export default function Success() {
             Project Joined!
           </div>
           <div className="text-gray-500 text-base mb-4">
-            Thank you for signing up to Code by Projects.
+            Thank you for signing up to Code By Projects.
           </div>
           <div className="text-gray-500 text-base">
             You will receive an email shortly with details of your first ticket.
