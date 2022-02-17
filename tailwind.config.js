@@ -25,6 +25,7 @@ module.exports = {
       border: "#FF0000",
     },
     fontSize: {
+      sm: "1rem",
       base: [
         "1.375rem",
         {

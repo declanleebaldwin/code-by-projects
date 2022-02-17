@@ -4,7 +4,7 @@ import { LandingPageForm, MyLink } from "../components";
 
 export default function Home() {
   return (
-    <div id="main" className="relative">
+    <div className="slideIn relative">
       <Head>
         <title>Code By Projects</title>
         <meta name="description" content="Code By Projects" />

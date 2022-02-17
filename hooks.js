@@ -6,6 +6,10 @@ const projects = [
     tags: ["HTML / CSS"],
   },
   {
+    value: "Portfolio Page",
+    tags: ["HTML / CSS"],
+  },
+  {
     value: "Wikipedia Page",
     tags: ["HTML / CSS"],
   },

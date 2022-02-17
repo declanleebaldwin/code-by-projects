@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { MyLink } from "../components";
 
 export default function Success() {
   return (
@@ -9,8 +10,7 @@ export default function Success() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div
-        id="main"
-        className="relative bg-gray-600 m-auto w-full md:w-[45rem] md:rounded-xl text-white font-light md:mt-8 md:mb-8"
+        className="slideIn relative bg-gray-600 m-auto w-full md:w-[45rem] md:rounded-xl text-white font-light md:mt-8 md:mb-8"
       >
         <div className="flex flex-col p-16 p16">
           <div className="font-bold text-xl uppercase mb-6 tracking-wider">
@@ -19,9 +19,10 @@ export default function Success() {
           <div className="text-gray-500 text-base mb-4">
             Thank you for signing up to Code By Projects.
           </div>
-          <div className="text-gray-500 text-base">
+          <div className="text-gray-500 text-base mb-4">
             You will receive an email shortly with details of your first ticket.
           </div>
+          <MyLink text="Back" href="/" />
         </div>
       </div>
     </div>
