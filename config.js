@@ -76,3 +76,17 @@ export const MENTOR_PAGE = {
     button: 'sign up'
   }
 }
+
+export const PROJECT_PAGE = {
+  beginner: {
+    title: 'Beginner',
+    projects: [
+      {
+        imageSrc: '/images/wiki.png',
+        imageAlt: 'wiki',
+        title: 'Wikipedia Page',
+        desc: 'HTML / CSS'
+      }
+    ]
+  },
+}
