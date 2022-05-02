@@ -18,7 +18,7 @@ const ReachOut = () => {
               />
             </div>
           </a>
-          <a className="mr-6 flex justify-center items-center h-14 w-14 hover:bg-purple-400 bg-purple-500 rounded-full cursor-pointer" href="https://discord.gg/6U3x9XUcRg" target="_blank">
+          <a className="mr-6 flex justify-center items-center h-14 w-14 hover:bg-purple-400 bg-purple-500 rounded-full cursor-pointer" href="https://discord.gg/6U3x9XUcRg" target="_blank" rel="noreferrer">
             <div className="relative w-4/6 h-4/6">
               <Image
                 objectFit="cover"
