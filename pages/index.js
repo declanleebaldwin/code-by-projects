@@ -3,8 +3,13 @@ import Image from "next/image";
 import { LandingPageForm, MyLink } from "../components";
 
 export default function Home() {
+
+  const onDiscordClick = () => {
+
+  }
+
   return (
-    <div className="slideIn relative">
+    <div className="relative">
       <Head>
         <title>Code By Projects</title>
         <meta name="description" content="Code By Projects" />
@@ -126,7 +131,7 @@ export default function Home() {
             reach out
           </div>
           <div className="flex">
-            <div className="mr-6 flex justify-center items-center h-14 w-14 hover:bg-purple-400 bg-purple-500 rounded-full cursor-pointer">
+            <a className="mr-6 flex justify-center items-center h-14 w-14 hover:bg-purple-400 bg-purple-500 rounded-full cursor-pointer" href="mailto:codebyprojects2022@gmail.com">
               <div className="relative w-4/6 h-4/6">
                 <Image
                   objectFit="cover"
@@ -135,8 +140,8 @@ export default function Home() {
                   alt="mail"
                 />
               </div>
-            </div>
-            <div className="mr-6 flex justify-center items-center h-14 w-14 hover:bg-purple-400 bg-purple-500 rounded-full cursor-pointer">
+            </a>
+            <a className="mr-6 flex justify-center items-center h-14 w-14 hover:bg-purple-400 bg-purple-500 rounded-full cursor-pointer" href="https://discord.gg/6U3x9XUcRg" target="_blank">
               <div className="relative w-4/6 h-4/6">
                 <Image
                   objectFit="cover"
@@ -145,17 +150,7 @@ export default function Home() {
                   alt="discord"
                 />
               </div>
-            </div>
-            <div className="flex justify-center items-center h-14 w-14 hover:bg-purple-400 bg-purple-500 rounded-full cursor-pointer">
-              <div className="relative w-1/2 h-1/2">
-                <Image
-                  objectFit="cover"
-                  src="/twitter.svg"
-                  layout="fill"
-                  alt="twitter"
-                />
-              </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>

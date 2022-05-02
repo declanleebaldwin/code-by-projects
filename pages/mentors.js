@@ -2,7 +2,7 @@ import Head from "next/head";
 
 export default function Mentors() {
   return (
-    <div className="slideIn relative">
+    <div className="relative">
     <Head>
       <title>Code By Projects</title>
       <meta name="description" content="Code By Projects" />

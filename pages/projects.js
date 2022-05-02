@@ -3,7 +3,7 @@ import { ProjectCard } from "../components";
 
 export default function Projects() {
   return (
-    <div className="slideIn relative">
+    <div className="relative">
       <Head>
         <title>Code By Projects</title>
         <meta name="description" content="Code By Projects" />

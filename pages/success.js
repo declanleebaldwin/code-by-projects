@@ -10,7 +10,7 @@ export default function Success() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div
-        className="slideIn relative bg-gray-600 m-auto w-full md:w-[45rem] md:rounded-xl text-white font-light md:mt-8 md:mb-8"
+        className="relative bg-gray-600 m-auto w-full md:w-[45rem] md:rounded-xl text-white font-light md:mt-8 md:mb-8"
       >
         <div className="flex flex-col p-16 p16">
           <div className="font-bold text-xl uppercase mb-6 tracking-wider">
