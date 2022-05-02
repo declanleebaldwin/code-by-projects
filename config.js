@@ -40,3 +40,37 @@ export const HOME_PAGE = {
     ]
   },
 }
+
+export const MENTOR_PAGE = {
+  wereHereToHelp: {
+    title: "We're here to help",
+    paragraphs: [
+      'Whether you’re stuck on a JavaScript topic, need guidance on how to approach a project or want a code review, our mentors are here to help.',
+      'Mentors are available for 1-1 sessions to go through whatever you want.',
+    ],
+  },
+  codeReviews: {
+    title: 'code reviews',
+    paragraphs: [
+      'Like with any skill, building the right habits is vital to being successful. This is no different with learning to code.',
+      'Code review help you build these habits.',
+      'After you have completed a ticket or project, a Mentor can review your code and give you tips on where you can improve.',
+      'There are always multiple ways to approach a problem, but picking the right way for the right reasons is part of what will make you a successful developer!',
+    ],
+    link: false
+  },
+  pricing: {
+    title: 'pricing',
+    bullets: [
+      'Code Reviews £25 per ticket',
+      'Mentor session £50/hour ',
+    ]
+  },
+  signUp: {
+    title: 'sign up',
+    paragraphs: [
+      'Sign up and we’ll assign you a mentor to get started.'
+    ],
+    button: 'sign up'
+  }
+}

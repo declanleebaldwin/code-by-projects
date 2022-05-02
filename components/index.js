@@ -8,3 +8,4 @@ export { default as Paragraph } from "./Paragraph";
 export { default as Section } from "./Section";
 export { default as PricingSection } from "./PricingSection";
 export { default as ReachOut } from "./ReachOut";
+export { default as SignUpForm } from "./SignUpForm";

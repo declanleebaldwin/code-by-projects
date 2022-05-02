@@ -7,7 +7,7 @@ const Section = ({ title, paragraphs, link }) => {
       <div className="flex flex-col pl-16 pr-16">
         <Title text={title} />
         {paragraphs.map((p, i) => {
-          return <Paragraph text={p} />
+          return <Paragraph key={i} text={p} />
         })}
         {link && <MyLink href={link.href} text={link.text} />}
       </div>

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Divider, Title  } from '.'
+import { Divider, Title } from '.'
 
 const Bullet = ({ text }) => {
   return (
@@ -25,7 +25,7 @@ const PricingSection = ({ title, bullets }) => {
       <Divider />
       <div className="flex flex-col pl-16 pr-16">
         <Title text={title} />
-        {bullets.map(b => <Bullet text={b} />)}
+        {bullets.map((b, i) => <Bullet key={i} text={b} />)}
       </div>
     </>
   );
