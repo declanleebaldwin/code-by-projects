@@ -64,7 +64,7 @@ export const MENTOR_PAGE = {
   pricing: {
     title: 'pricing',
     bullets: [
-      'Code Reviews £25 per ticket',
+      'Code Reviews £25/ticket',
       'Mentor session £50/hour ',
     ]
   },
