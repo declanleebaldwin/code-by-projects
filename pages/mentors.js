@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Section, PricingSection, SignUpForm, ReachOut } from "../components";
+import { Section, PricingSection, SignUpForm, ReachOut, ImageSection } from "../components";
 import { MENTOR_PAGE } from "../config";
 
 export default function Mentors() {
@@ -26,6 +26,7 @@ export default function Mentors() {
           paragraphs={MENTOR_PAGE.codeReviews.paragraphs}
           link={MENTOR_PAGE.codeReviews.link}
         />
+        <ImageSection image={MENTOR_PAGE.codeReviewImage} />
         <PricingSection
           title={MENTOR_PAGE.pricing.title}
           bullets={MENTOR_PAGE.pricing.bullets}

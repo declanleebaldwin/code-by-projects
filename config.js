@@ -7,6 +7,7 @@ export const HOME_PAGE = {
     ],
     link: false
   },
+  projectImage: '/images/dev_focus.svg',
   projects: {
     title: "projects",
     paragraphs: [
@@ -59,6 +60,7 @@ export const MENTOR_PAGE = {
     ],
     link: false
   },
+  codeReviewImage: '/images/shared_workspace.svg',
   pricing: {
     title: 'pricing',
     bullets: [

@@ -1,6 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
-import { LandingPageForm, PricingSection, Divider, Title, Section, ReachOut } from "../components";
+import { LandingPageForm, PricingSection, Divider, ImageSection, Section, ReachOut } from "../components";
 import { HOME_PAGE } from "../config"
 export default function Home() {
 
@@ -30,6 +29,7 @@ export default function Home() {
           paragraphs={HOME_PAGE.howItWorks.paragraphs}
           link={HOME_PAGE.howItWorks.link}
         />
+        <ImageSection image={HOME_PAGE.projectImage} />
         <Section
           title={HOME_PAGE.projects.title}
           paragraphs={HOME_PAGE.projects.paragraphs}
