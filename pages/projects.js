@@ -12,7 +12,7 @@ export default function Projects() {
       <div className="m-auto h-full w-full md:w-[60rem] md:rounded-xl text-white font-light md:mt-8 md:mb-8">
         <div className="flex w-full">
           <div className="flex flex-col font-extrabold text-4xl md:text-6xl pt-16 pb-16">
-            <span>Projects.</span>
+            <span>Projects</span>
           </div>
         </div>
         <div className="flex flex-col">
