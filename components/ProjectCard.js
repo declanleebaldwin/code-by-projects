@@ -1,8 +1,15 @@
 import Image from "next/image";
+import { useRouter } from 'next/router'
 
-const ProjectCard = ({ imageSrc, imageAlt, title, desc }) => {
+const ProjectCard = ({ imageSrc, imageAlt, title, desc, href }) => {
+  const router = useRouter();
+
+  const onClick = () => {
+    router.push(href)
+  }
+
   return (
-    <div className="bg-gray-600 hover:bg-gray-400 ease-in-out duration-150 p-6 rounded cursor-pointer">
+    <div onClick={onClick} className="bg-gray-600 hover:bg-gray-400 ease-in-out duration-150 p-6 rounded cursor-pointer">
       <div className="w-[15rem] h-[15rem] relative rounded overflow-hidden mb-6">
         <Image objectFit="cover" src={imageSrc} layout="fill" alt={imageAlt} />
       </div>

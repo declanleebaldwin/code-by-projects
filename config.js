@@ -80,13 +80,30 @@ export const MENTOR_PAGE = {
 export const PROJECT_PAGE = {
   beginner: {
     title: 'Beginner',
-    projects: [
-      {
-        imageSrc: '/images/wiki.png',
-        imageAlt: 'wiki',
-        title: 'Wikipedia Page',
-        desc: 'HTML / CSS'
-      }
-    ]
   },
+}
+
+export const PROJECT_DIFFICULTIES = {
+  beginner: 'beginner',
+  intermediate: 'intermediate',
+  expert: 'expert'
+}
+
+export const PROJECTS = {
+  portfolio: {
+    difficulty: PROJECT_DIFFICULTIES.beginner,
+    imageSrc: '/images/wiki.png',
+    imageAlt: 'landing-page',
+    title: 'Landing Page',
+    desc: 'HTML / CSS',
+    href: '/projects/landing'
+  },
+  wikipedia: {
+    difficulty: PROJECT_DIFFICULTIES.beginner,
+    imageSrc: '/images/wiki.png',
+    imageAlt: 'wiki',
+    title: 'Wikipedia Page',
+    desc: 'HTML / CSS',
+    href: '/projects/wikipedia'
+  }
 }
