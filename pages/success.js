@@ -20,7 +20,7 @@ export default function Success() {
             Thank you for signing up to Code By Projects.
           </div>
           <div className="text-gray-500 text-base mb-4">
-            You will receive an email shortly with details of your first ticket.
+            You will receive an email shortly with details of your project.
           </div>
           <MyLink text="Back" href="/" />
         </div>

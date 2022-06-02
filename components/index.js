@@ -10,3 +10,4 @@ export { default as PricingSection } from "./PricingSection";
 export { default as ReachOut } from "./ReachOut";
 export { default as SignUpForm } from "./SignUpForm";
 export { default as ImageSection } from "./ImageSection";
+export { default as FixedSizeImageSection } from "./FixedSizeImageSection";

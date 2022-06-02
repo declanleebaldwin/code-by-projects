@@ -90,20 +90,63 @@ export const PROJECT_DIFFICULTIES = {
 }
 
 export const PROJECTS = {
-  portfolio: {
+  landing: {
     difficulty: PROJECT_DIFFICULTIES.beginner,
     imageSrc: '/images/wiki.png',
     imageAlt: 'landing-page',
     title: 'Landing Page',
     desc: 'HTML / CSS',
-    href: '/projects/landing'
+    href: '/projects/landing',
+    details: {
+      makingSection: {
+        title: 'What will you be making',
+        paragraphs: [
+          'You will be building a landing page for a travel blog.',
+          'As this is a beginner project, the landing page only needs HTML and CSS.',
+          'Understanding the fundamentals of web development is vital for your progression so no frameworks or libraries will be allowed.'
+        ],
+        link: {
+          href: "https://enigmatic-anchorage-73371.herokuapp.com/",
+          text: 'View Site.'
+        }
+      },
+      includedSection: {
+        title: "What's included",
+        paragraphs: [
+          'Access to the project’s tickets which splits the project up into bitesize pieces',
+          'GitHub repository, the repository is split into branches which relate to the tickets to make it easy to follow',
+          'Each ticket has a ‘hints’ section which contains resources  to help you with that particular skill'
+        ],
+        link: false
+      },
+      exampleTicketSection: {
+        title: 'Example Ticket',
+        image: '/images/example_ticket.png',
+        width: 569,
+        height: 560
+      },
+      pricing: {
+        title: 'pricing',
+        bullets: [
+          '£50 for entire Project, no hidden fees',
+          'Mentor session £50/hour ',
+        ]
+      },
+      join: {
+        title: 'join',
+        paragraphs: [
+          "Enter your email address and we'll send you the details to get started."
+        ],
+        button: 'join project'
+      }
+    }
   },
-  wikipedia: {
+  portfolio: {
     difficulty: PROJECT_DIFFICULTIES.beginner,
     imageSrc: '/images/wiki.png',
     imageAlt: 'wiki',
-    title: 'Wikipedia Page',
+    title: 'Portfolio',
     desc: 'HTML / CSS',
-    href: '/projects/wikipedia'
+    href: '/projects/portfolio'
   }
 }
