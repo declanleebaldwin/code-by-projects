@@ -123,7 +123,7 @@ export const PROJECT_DETAILS_PAGE = {
 export const PROJECTS = {
   landing: {
     difficulty: PROJECT_DIFFICULTIES.beginner,
-    imageSrc: '/images/wiki.png',
+    imageSrc: '/images/landing_page.jpg',
     imageAlt: 'landing-page',
     title: 'Landing Page',
     desc: 'HTML / CSS',
@@ -152,7 +152,7 @@ export const PROJECTS = {
   },
   portfolio: {
     difficulty: PROJECT_DIFFICULTIES.beginner,
-    imageSrc: '/images/wiki.png',
+    imageSrc: '/images/portfolio.png',
     imageAlt: 'wiki',
     title: 'Portfolio',
     desc: 'HTML / CSS',
