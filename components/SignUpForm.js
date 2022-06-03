@@ -53,6 +53,7 @@ const SignUpForm = ({ title, paragraphs, button }) => {
       body: encode({
         "form-name": form.getAttribute("name"),
         email,
+        data: 'mentor-page'
       }),
     })
       .then(() => onSubmitSuccess())
