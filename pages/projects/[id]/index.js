@@ -1,8 +1,7 @@
 import Head from "next/head";
-import Image from "next/image";
 import { useRouter } from 'next/router'
 import { Section, FixedSizeImageSection, PricingSection, SignUpForm, ReachOut, ImageSection, Divider } from "../../../components";
-import { PROJECTS } from '../../../config'
+import { PROJECTS, PROJECT_DETAILS_PAGE } from '../../../config'
 
 const Project = () => {
   const router = useRouter()
@@ -30,24 +29,24 @@ const Project = () => {
           link={project.details.makingSection.link}
         />
         <Section
-          title={project.details.includedSection.title}
-          paragraphs={project.details.includedSection.paragraphs}
-          link={project.details.includedSection.link}
+          title={PROJECT_DETAILS_PAGE.includedSection.title}
+          paragraphs={PROJECT_DETAILS_PAGE.includedSection.paragraphs}
+          link={PROJECT_DETAILS_PAGE.includedSection.link}
           bulleted={true}
         />
         <FixedSizeImageSection
-          title={project.details.exampleTicketSection.title}
-          image={project.details.exampleTicketSection.image}
-          width={project.details.exampleTicketSection.width}
-          height={project.details.exampleTicketSection.height} />
+          title={PROJECT_DETAILS_PAGE.exampleTicketSection.title}
+          image={PROJECT_DETAILS_PAGE.exampleTicketSection.image}
+          width={PROJECT_DETAILS_PAGE.exampleTicketSection.width}
+          height={PROJECT_DETAILS_PAGE.exampleTicketSection.height} />
         <PricingSection
           title={project.details.pricing.title}
           bullets={project.details.pricing.bullets}
         />
         <SignUpForm
-          title={project.details.join.title}
-          paragraphs={project.details.join.paragraphs}
-          button={project.details.join.button}
+          title={PROJECT_DETAILS_PAGE.join.title}
+          paragraphs={PROJECT_DETAILS_PAGE.join.paragraphs}
+          button={PROJECT_DETAILS_PAGE.join.button}
         />
         <ReachOut />
       </div>
