@@ -35,7 +35,6 @@ export default function Mentors() {
           title={MENTOR_PAGE.signUp.title}
           paragraphs={MENTOR_PAGE.signUp.paragraphs}
           button={MENTOR_PAGE.signUp.button}
-          data='mentor_page'
         />
         <ReachOut />
       </div>

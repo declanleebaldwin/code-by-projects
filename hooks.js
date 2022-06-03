@@ -9,6 +9,14 @@ const projects = [
     value: "Portfolio",
     tags: ["HTML / CSS"],
   },
+  {
+    value: "Restaurant Picker",
+    tags: ["HTML / CSS", "JavaScript"],
+  },
+  {
+    value: "Recipe Book",
+    tags: ["HTML / CSS", "JavaScript", "React"],
+  },
 ];
 
 export const useFilteredProjects = ({ technology }) => {

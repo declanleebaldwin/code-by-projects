@@ -10,7 +10,7 @@ const encode = (data) => {
     .join("&");
 };
 
-const SignUpForm = ({ title, paragraphs, button, data }) => {
+const SignUpForm = ({ title, paragraphs, button }) => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -53,7 +53,6 @@ const SignUpForm = ({ title, paragraphs, button, data }) => {
       body: encode({
         "form-name": form.getAttribute("name"),
         email,
-        data
       }),
     })
       .then(() => onSubmitSuccess())
