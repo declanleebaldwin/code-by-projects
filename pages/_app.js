@@ -20,7 +20,7 @@ const links = [
 
 const Menu = ({ show, onClose }) => {
   const router = useRouter();
-  const className = `cursor-pointer text-white rounded-b-lg -translate-x-full origin-top-right bg-black-300 fixed ease-in-out scale-0 duration-150 ${show ? 'scale-100	' : ''}`
+  const className = `cursor-pointer text-white rounded-lg -translate-x-full origin-top-right bg-black-300 fixed ease-in-out scale-0 duration-150 ${show ? 'scale-100	' : ''}`
 
   const onLinkClick = (link) => {
     onClose();

@@ -8,7 +8,7 @@ const FixedSizeImageSection = ({ image, title, width, height }) => {
       <div className="flex flex-col align-center justify-center pl-16 pr-16 pt-4 pb-4">
         <Title text={title} />
         <div className='w-full bg-gray-100 rounded-xl p-4 mt-2' >
-          <div className="relative w-full h-full">
+          <div className="relative w-full h-full rounded-xl overflow-hidden">
             <Image
               src={image}
               layout="responsive"
