@@ -1,11 +1,8 @@
 import Head from "next/head";
 import { LandingPageForm, PricingSection, Divider, ImageSection, Section, ReachOut } from "../components";
 import { HOME_PAGE } from "../config"
+
 export default function Home() {
-
-  const onDiscordClick = () => {
-
-  }
 
   return (
     <div className="relative">

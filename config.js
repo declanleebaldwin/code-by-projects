@@ -81,6 +81,12 @@ export const PROJECT_PAGE = {
   beginner: {
     title: 'Beginner',
   },
+  intermediate: {
+    title: 'Intermediate',
+  },
+  expert: {
+    title: 'Expert',
+  },
 }
 
 export const PROJECT_DIFFICULTIES = {

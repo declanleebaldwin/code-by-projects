@@ -6,20 +6,8 @@ const projects = [
     tags: ["HTML / CSS"],
   },
   {
-    value: "Portfolio Page",
+    value: "Portfolio",
     tags: ["HTML / CSS"],
-  },
-  {
-    value: "Wikipedia Page",
-    tags: ["HTML / CSS"],
-  },
-  {
-    value: "Restaurant Picker",
-    tags: ["HTML / CSS", "JavaScript", "React"],
-  },
-  {
-    value: "Recipe Book",
-    tags: ["HTML / CSS", "JavaScript", "React"],
   },
 ];
 

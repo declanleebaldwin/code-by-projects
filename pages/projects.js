@@ -4,7 +4,7 @@ import { PROJECT_PAGE, PROJECTS, PROJECT_DIFFICULTIES } from "../config";
 
 const ProjectSection = ({ title, projectKeys }) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mb-8">
       <div className="font-bold text-xl uppercase mb-6 tracking-wider">
         {title}
       </div>
@@ -50,6 +50,18 @@ export default function Projects() {
       <div className="md:m-auto h-full w-full md:w-[60rem] md:rounded-xl text-white font-light mx-8">
         <Hero />
         <ProjectSection title={PROJECT_PAGE.beginner.title} projectKeys={beginnerProjectKeys} />
+        <div className="flex flex-col mb-16">
+          <div className="font-bold text-xl uppercase mb-6 tracking-wider">
+            {PROJECT_PAGE.intermediate.title}
+          </div>
+          <div className="text-gray-500 text-sm">Coming Soon...</div>
+        </div>
+        <div className="flex flex-col mb-16">
+          <div className="font-bold text-xl uppercase mb-6 tracking-wider">
+            {PROJECT_PAGE.expert.title}
+          </div>
+          <div className="text-gray-500 text-sm">Coming Soon...</div>
+        </div>
       </div >
     </div>
   );
