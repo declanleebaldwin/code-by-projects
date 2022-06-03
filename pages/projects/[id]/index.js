@@ -33,6 +33,7 @@ const Project = () => {
           title={project.details.includedSection.title}
           paragraphs={project.details.includedSection.paragraphs}
           link={project.details.includedSection.link}
+          bulleted={true}
         />
         <FixedSizeImageSection
           title={project.details.exampleTicketSection.title}
