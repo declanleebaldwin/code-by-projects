@@ -141,6 +141,9 @@ export const PROJECTS = {
           text: 'View Site.'
         }
       },
+      showcase: {
+        src: '/videos/landing_page_showcase.mp4'
+      },
       pricing: {
         title: 'pricing',
         bullets: [
@@ -169,6 +172,9 @@ export const PROJECTS = {
           href: "https://declanleebaldwin.github.io/MyPortfolio/index.html",
           text: 'View Site.'
         }
+      },
+      showcase: {
+        src: '/videos/landing_page_showcase.mp4'
       },
       pricing: {
         title: 'pricing',
