@@ -58,7 +58,7 @@ const LandingPageForm = () => {
     } else {
       setError(false);
     }
-    console.log('data', email, technology)
+    console.log('data', email, technology, project)
     setLoading(true);
     fetch("/", {
       method: "POST",
@@ -88,7 +88,7 @@ const LandingPageForm = () => {
         name="technology" value={technology} />
       <input
         type='hidden'
-        name="technology" value={project} />
+        name="project" value={project} />
       <div className="font-bold text-xl uppercase mb-6 tracking-wider">join</div>
       <div className="text-gray-500 text-base mb-4">
         Start your first project for free.
