@@ -58,7 +58,7 @@ const LandingPageForm = () => {
     } else {
       setError(false);
     }
-    console.log('data', email, tech, technology, project)
+    console.log('data', email, technology)
     setLoading(true);
     fetch("/", {
       method: "POST",
