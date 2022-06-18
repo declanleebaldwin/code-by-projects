@@ -70,7 +70,7 @@ const LandingPageForm = () => {
         project
       }),
     })
-      .then(() => alert('success'))
+      .then(() => onSubmitSuccess())
       .catch((error) => onSubmitError(error));
   };
 
