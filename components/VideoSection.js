@@ -5,7 +5,7 @@ const VideoSection = ({ video }) => {
     <>
       <Divider />
       <div className='w-full pl-16 pr-16'>
-        <video className="w-full rounded-xl" src={video} autoPlay muted loop></video>
+        <video className="w-full rounded-xl" src={video} autoPlay muted loop controls={false}></video>
       </div>
     </>
   );

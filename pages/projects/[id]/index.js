@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from 'next/router'
-import { Section, FixedSizeImageSection, PricingSection, SignUpForm, ReachOut, VideoSection } from "../../../components";
+import { Section, FixedSizeImageSection, ImageSection, PricingSection, SignUpForm, ReachOut, VideoSection } from "../../../components";
 import { PROJECTS, PROJECT_DETAILS_PAGE } from '../../../config'
 
 const Project = () => {
@@ -28,7 +28,8 @@ const Project = () => {
           paragraphs={project.details.makingSection.paragraphs}
           link={project.details.makingSection.link}
         />
-        <VideoSection video={project.details.showcase.src} />
+        {project.details.showcase.video && <VideoSection video={project.details.showcase.video.src} />}
+        {project.details.showcase.image && <ImageSection image={project.details.showcase.image.src} padding={false} />}
         <Section
           title={PROJECT_DETAILS_PAGE.includedSection.title}
           paragraphs={PROJECT_DETAILS_PAGE.includedSection.paragraphs}

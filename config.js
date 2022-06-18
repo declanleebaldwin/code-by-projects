@@ -142,7 +142,10 @@ export const PROJECTS = {
         }
       },
       showcase: {
-        src: '/videos/landing_page_showcase.mp4'
+        video: {
+          src: '/videos/landing_page_showcase.mp4'
+        },
+        image: false
       },
       pricing: {
         title: 'pricing',
@@ -174,7 +177,10 @@ export const PROJECTS = {
         }
       },
       showcase: {
-        src: '/videos/landing_page_showcase.mp4'
+        video: false,
+        image: {
+          src: '/images/portfolio_showcase.png'
+        }
       },
       pricing: {
         title: 'pricing',
