@@ -17,6 +17,7 @@ const LandingPageForm = () => {
   const [error, setError] = useState(false);
   const [technology, setTechnology] = useState();
   const [loading, setLoading] = useState(false);
+  const [tech, setTech] = useState('');
   const [project, setProject] = useState();
   const formRef = useRef();
   const router = useRouter();
@@ -60,13 +61,15 @@ const LandingPageForm = () => {
       setError(false);
     }
     const form = formRef.current;
+    console.log('data', email, tech, technology, project)
     setLoading(true);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": form.getAttribute("name"),
+        "form-name": 'home-page-form',
         email,
+        tech,
         technology,
         project,
       }),
@@ -78,15 +81,18 @@ const LandingPageForm = () => {
   return (
     <form
       name="contact"
-      method="POST"
+      method="popst"
       className="flex flex-col pl-16 pr-16"
       data-netlify="true"
       ref={formRef}
       onSubmit={handleSubmit}
     >
-      <input type="hidden" name="form-name" value="contact" />
-      <input type="hidden" name="technology" value={technology ?? ""} />
-      <input type="hidden" name="project" value={project ?? ""} />
+      <input type="hidden" name="form-name" value="home-page-form" />
+      <input type="hidden" name="technology" value={technology ?? ''} />
+      <input type="hidden" name="project" value={project ?? ''} />
+      <input
+        type='hidden'
+        name="tech" value={tech} />
       <div className="font-bold text-xl uppercase mb-6 tracking-wider">join</div>
       <div className="text-gray-500 text-base mb-4">
         Start your first project for free.
@@ -120,7 +126,10 @@ const LandingPageForm = () => {
           }
           type="text"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) => {
+            setEmail(e.target.value)
+            setTech(e.target.value)
+          }}
           placeholder="Email Address"
         ></input>
       </div>
