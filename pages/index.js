@@ -42,8 +42,8 @@ export default function Home() {
           bullets={HOME_PAGE.pricing.bullets}
         />
         <Divider />
-        {/* <LandingPageForm /> */}
-        <ContactForm />
+        <LandingPageForm />
+        {/* <ContactForm /> */}
         <ReachOut />
       </div>
     </div>

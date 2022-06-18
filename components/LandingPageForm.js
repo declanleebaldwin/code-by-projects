@@ -71,7 +71,7 @@ const LandingPageForm = () => {
         project,
       }),
     })
-      .then(() => onSubmitSuccess())
+      .then(() => alert('success'))
       .catch((error) => onSubmitError(error));
   };
 
@@ -80,11 +80,11 @@ const LandingPageForm = () => {
       name="contact"
       method="POST"
       className="flex flex-col pl-16 pr-16"
-      action="/thanks/"
       data-netlify="true"
       ref={formRef}
       onSubmit={handleSubmit}
     >
+      <input type="hidden" name="form-name" value="contact" />
       <input type="hidden" name="technology" value={technology ?? ""} />
       <input type="hidden" name="project" value={project ?? ""} />
       <div className="font-bold text-xl uppercase mb-6 tracking-wider">join</div>
@@ -143,12 +143,11 @@ const LandingPageForm = () => {
             </div>
           </div>
         ) : (
-          <button
+          <input
             type="submit"
+            value="Join Project"
             className="w-full h-full text-white uppercase font-semibold text-base tracking-wider"
-          >
-            join project
-          </button>
+          />
         )}
       </div>
     </form>
