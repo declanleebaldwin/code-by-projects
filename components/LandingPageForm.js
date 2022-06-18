@@ -45,8 +45,8 @@ const LandingPageForm = () => {
 
   const resetForm = () => {
     setEmail("");
-    setTechnology();
-    setProject();
+    setTechnology('');
+    setProject('');
   };
 
   const handleSubmit = (e) => {
@@ -71,7 +71,7 @@ const LandingPageForm = () => {
         type
       }),
     })
-      .then(() => alert('success'))
+      .then(() => onSubmitSuccess())
       .catch((error) => onSubmitError(error));
   };
 
