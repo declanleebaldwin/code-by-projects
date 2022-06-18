@@ -1,35 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
+
+function encode(data) {
+  return Object.keys(data)
+    .map(
+      (key) =>
+        encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+    )
+    .join("&");
+}
+
 const ContactForm = () => {
-  const ContactForm = (
-    <form
-      style={{color: 'black'}}
-      method="POST"
-      name="test-form"
-      action="success"
-      data-netlify="true"
-    >
-      <input type="hidden" name="form-name" value="test-form" />
-      <label htmlFor="name">Name *</label>
-      <input
-        id="name"
-        name="name"
-        required
-        type="text"
-      />
-      <label htmlFor="company">Company *</label>
-      <input id="company" name="company" required type="text" />
-      <label htmlFor="email">E-mail Address *</label>
-      <input id="email" type="email" name="email" required />
-      <label htmlFor="message">Message *</label>
-      <textarea id="message" name="message" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  );
+  const [order, setOrder] = useState('');
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": event.target.getAttribute("name"),
+        order,
+      }),
+    })
+      .then(() => alert('succes'))
+      .catch((error) => alert(error));
+  };
+
+  const handleChange = (e) => setOrder(e.target.value)
 
   return (
     <div>
-      <h1>Contact Us</h1>
-      {ContactForm}
+      <form
+        style={{ color: 'white' }}
+        data-netlify="true"
+        name="pizzaOrder"
+        method="post"
+        onSubmit={handleSubmit}
+      >
+        <input type="hidden" name="form-name" value="pizzaOrder" />
+        <label>
+          What order did the pizza give to the pineapple?
+          <input
+            style={{ color: 'black' }}
+            name="order" type="text" onChange={handleChange} />
+        </label>
+        <input type="submit" />
+      </form>
     </div>
   );
 };
