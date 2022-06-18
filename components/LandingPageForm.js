@@ -17,11 +17,11 @@ const LandingPageForm = () => {
   const [error, setError] = useState(false);
   const [technology, setTechnology] = useState('');
   const [loading, setLoading] = useState(false);
-  const [project, setProject] = useState();
+  const [project, setProject] = useState('');
   const router = useRouter();
   const filteredProjects = useFilteredProjects({ technology });
   const selectTechnology = (item) => {
-    setProject();
+    setProject('');
     setTechnology(item);
   };
 
@@ -67,6 +67,7 @@ const LandingPageForm = () => {
         "form-name": e.target.getAttribute("name"),
         email,
         technology,
+        project
       }),
     })
       .then(() => alert('success'))
@@ -85,6 +86,9 @@ const LandingPageForm = () => {
       <input
         type='hidden'
         name="technology" value={technology} />
+      <input
+        type='hidden'
+        name="technology" value={project} />
       <div className="font-bold text-xl uppercase mb-6 tracking-wider">join</div>
       <div className="text-gray-500 text-base mb-4">
         Start your first project for free.
@@ -98,7 +102,7 @@ const LandingPageForm = () => {
         onSelected={selectTechnology}
         placeholder="Technology"
       />
-      {/* 
+
       {filteredProjects && (
         <Select
           items={filteredProjects}
@@ -106,7 +110,7 @@ const LandingPageForm = () => {
           onSelected={selectProject}
           placeholder="Project"
         />
-      )} */}
+      )}
       <div className="relative mb-8">
         <input
           onBlur={() => setError(false)}
