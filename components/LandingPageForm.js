@@ -15,11 +15,9 @@ const encode = (data) => {
 const LandingPageForm = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
-  const [technology, setTechnology] = useState();
+  const [technology, setTechnology] = useState('');
   const [loading, setLoading] = useState(false);
-  const [tech, setTech] = useState('');
   const [project, setProject] = useState();
-  const formRef = useRef();
   const router = useRouter();
   const filteredProjects = useFilteredProjects({ technology });
   const selectTechnology = (item) => {
@@ -60,7 +58,6 @@ const LandingPageForm = () => {
     } else {
       setError(false);
     }
-    const form = formRef.current;
     console.log('data', email, tech, technology, project)
     setLoading(true);
     fetch("/", {
@@ -69,9 +66,7 @@ const LandingPageForm = () => {
       body: encode({
         "form-name": e.target.getAttribute("name"),
         email,
-        tech,
         technology,
-        project,
       }),
     })
       .then(() => alert('success'))
@@ -80,17 +75,16 @@ const LandingPageForm = () => {
 
   return (
     <form
-      name="contact"
+      name="homeContact"
       method="post"
       className="flex flex-col pl-16 pr-16"
       data-netlify="true"
-      ref={formRef}
       onSubmit={handleSubmit}
     >
       <input type="hidden" name="form-name" value="homeContact" />
       <input
         type='hidden'
-        name="tech" value={tech} />
+        name="technology" value={technology} />
       <div className="font-bold text-xl uppercase mb-6 tracking-wider">join</div>
       <div className="text-gray-500 text-base mb-4">
         Start your first project for free.
@@ -98,13 +92,13 @@ const LandingPageForm = () => {
       <div className="text-gray-500 text-base mb-8">
         Sign up and we’ll email you your first ticket.
       </div>
-      <Select
+      {/* <Select
         items={technologies}
         selected={technology}
         onSelected={selectTechnology}
         placeholder="Technology"
-      />
-
+      /> */}
+      {/* 
       {filteredProjects && (
         <Select
           items={filteredProjects}
@@ -112,7 +106,7 @@ const LandingPageForm = () => {
           onSelected={selectProject}
           placeholder="Project"
         />
-      )}
+      )} */}
       <div className="relative mb-8">
         <input
           onBlur={() => setError(false)}
@@ -126,7 +120,7 @@ const LandingPageForm = () => {
           value={email}
           onChange={(e) => {
             setEmail(e.target.value)
-            setTech(e.target.value)
+            setTechnology(e.target.value)
           }}
           placeholder="Email Address"
         ></input>
