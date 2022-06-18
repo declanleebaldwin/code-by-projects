@@ -18,6 +18,7 @@ const LandingPageForm = () => {
   const [technology, setTechnology] = useState('');
   const [loading, setLoading] = useState(false);
   const [project, setProject] = useState('');
+  const type = 'Home Page'
   const router = useRouter();
   const filteredProjects = useFilteredProjects({ technology });
   const selectTechnology = (item) => {
@@ -58,7 +59,6 @@ const LandingPageForm = () => {
     } else {
       setError(false);
     }
-    console.log('data', email, technology, project)
     setLoading(true);
     fetch("/", {
       method: "POST",
@@ -67,7 +67,8 @@ const LandingPageForm = () => {
         "form-name": e.target.getAttribute("name"),
         email,
         technology,
-        project
+        project,
+        type
       }),
     })
       .then(() => alert('success'))
@@ -89,6 +90,9 @@ const LandingPageForm = () => {
       <input
         type='hidden'
         name="project" value={project} />
+      <input
+        type='hidden'
+        name="type" value={type} />
       <div className="font-bold text-xl uppercase mb-6 tracking-wider">join</div>
       <div className="text-gray-500 text-base mb-4">
         Start your first project for free.
@@ -147,11 +151,12 @@ const LandingPageForm = () => {
             </div>
           </div>
         ) : (
-          <input
+          <button
             type="submit"
-            value="Join Project"
             className="w-full h-full text-white uppercase font-semibold text-base tracking-wider"
-          />
+          >
+            Join Project
+          </button>
         )}
       </div>
     </form>
