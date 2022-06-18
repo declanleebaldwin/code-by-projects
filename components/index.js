@@ -13,3 +13,4 @@ export { default as ImageSection } from "./ImageSection";
 export { default as FixedSizeImageSection } from "./FixedSizeImageSection";
 export { default as BulletedParagraph } from "./BulletedParagraph";
 export { default as VideoSection } from "./VideoSection";
+export { default as ContactForm } from "./ContactForm";

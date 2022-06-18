@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { LandingPageForm, PricingSection, Divider, ImageSection, Section, ReachOut } from "../components";
+import { ContactForm, LandingPageForm, PricingSection, Divider, ImageSection, Section, ReachOut } from "../components";
 import { HOME_PAGE } from "../config"
 
 export default function Home() {
@@ -42,7 +42,8 @@ export default function Home() {
           bullets={HOME_PAGE.pricing.bullets}
         />
         <Divider />
-        <LandingPageForm />
+        {/* <LandingPageForm /> */}
+        <ContactForm />
         <ReachOut />
       </div>
     </div>
