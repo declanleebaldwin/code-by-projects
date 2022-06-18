@@ -19,7 +19,6 @@ const LandingPageForm = () => {
   const [loading, setLoading] = useState(false);
   const [project, setProject] = useState('');
   const router = useRouter();
-  const type = 'Home Page'
   const filteredProjects = useFilteredProjects({ technology });
   const selectTechnology = (item) => {
     setProject('');
@@ -45,8 +44,8 @@ const LandingPageForm = () => {
 
   const resetForm = () => {
     setEmail("");
-    setTechnology('');
-    setProject('');
+    setTechnology();
+    setProject();
   };
 
   const handleSubmit = (e) => {
@@ -59,6 +58,7 @@ const LandingPageForm = () => {
     } else {
       setError(false);
     }
+    console.log('data', email, technology, project)
     setLoading(true);
     fetch("/", {
       method: "POST",
@@ -67,32 +67,28 @@ const LandingPageForm = () => {
         "form-name": e.target.getAttribute("name"),
         email,
         technology,
-        project,
-        type
+        project
       }),
     })
-      .then(() => onSubmitSuccess())
+      .then(() => alert('success'))
       .catch((error) => onSubmitError(error));
   };
 
   return (
     <form
-      name="signUp"
+      name="homeContact"
       method="post"
       className="flex flex-col pl-16 pr-16"
       data-netlify="true"
       onSubmit={handleSubmit}
     >
-      <input type="hidden" name="form-name" value="signUp" />
+      <input type="hidden" name="form-name" value="homeContact" />
       <input
         type='hidden'
         name="technology" value={technology} />
       <input
         type='hidden'
         name="project" value={project} />
-      <input
-        type='hidden'
-        name="type" value={type} />
       <div className="font-bold text-xl uppercase mb-6 tracking-wider">join</div>
       <div className="text-gray-500 text-base mb-4">
         Start your first project for free.
