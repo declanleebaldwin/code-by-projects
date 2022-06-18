@@ -77,13 +77,13 @@ const LandingPageForm = () => {
 
   return (
     <form
-      name="signUp"
+      name="homePageForm"
       method="post"
       className="flex flex-col pl-16 pr-16"
       data-netlify="true"
       onSubmit={handleSubmit}
     >
-      <input type="hidden" name="form-name" value="signUp" />
+      <input type="hidden" name="form-name" value="homePageForm" />
       <input
         type='hidden'
         name="technology" value={technology} />
