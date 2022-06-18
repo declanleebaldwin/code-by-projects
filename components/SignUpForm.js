@@ -10,13 +10,12 @@ const encode = (data) => {
     .join("&");
 };
 
-const SignUpForm = ({ title, paragraphs, button }) => {
+const SignUpForm = ({ title, paragraphs, button, type }) => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
   const formRef = useRef();
   const router = useRouter();
-
 
   const onSubmitError = (error) => {
     console.log("onSubmitError", error);
@@ -53,7 +52,7 @@ const SignUpForm = ({ title, paragraphs, button }) => {
       body: encode({
         "form-name": form.getAttribute("name"),
         email,
-        data: 'mentor-page'
+        type
       }),
     })
       .then(() => onSubmitSuccess())
@@ -64,7 +63,7 @@ const SignUpForm = ({ title, paragraphs, button }) => {
     <>
       <Divider />
       <form
-        name="contact"
+        name="signUp"
         method="POST"
         className="flex flex-col pl-16 pr-16"
         action="/thanks/"
@@ -72,7 +71,10 @@ const SignUpForm = ({ title, paragraphs, button }) => {
         ref={formRef}
         onSubmit={handleSubmit}
       >
-        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="form-name" value="signUp" />
+        <input
+          type='hidden'
+          name="type" value={type} />
         <Title text={title} />
         {paragraphs.map((p, i) => {
           return <Paragraph key={i} text={p} />

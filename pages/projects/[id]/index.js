@@ -49,6 +49,7 @@ const Project = () => {
           title={PROJECT_DETAILS_PAGE.join.title}
           paragraphs={PROJECT_DETAILS_PAGE.join.paragraphs}
           button={PROJECT_DETAILS_PAGE.join.button}
+          type={`Project Details - ${project.title}`}
         />
         <ReachOut />
       </div>
