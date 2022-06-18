@@ -11,6 +11,7 @@ function encode(data) {
 
 const ContactForm = () => {
   const [order, setOrder] = useState('');
+  const [tech, setTech] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -20,13 +21,17 @@ const ContactForm = () => {
       body: encode({
         "form-name": event.target.getAttribute("name"),
         order,
+        tech
       }),
     })
       .then(() => alert('succes'))
       .catch((error) => alert(error));
   };
 
-  const handleChange = (e) => setOrder(e.target.value)
+  const handleChange = (e) => {
+    setOrder(e.target.value)
+    setTech(e.target.value)
+  }
 
   return (
     <div>
@@ -43,6 +48,9 @@ const ContactForm = () => {
           <input
             style={{ color: 'black' }}
             name="order" type="text" onChange={handleChange} />
+          <input
+            type='hidden'
+            name="tech" value={tech} />
         </label>
         <input type="submit" />
       </form>
