@@ -14,6 +14,7 @@ const encode = (data) => {
 
 const LandingPageForm = () => {
   const [email, setEmail] = useState("");
+  const [test, setTest] = useState("");
   const [error, setError] = useState(false);
   const [technology, setTechnology] = useState();
   const [loading, setLoading] = useState(false);
@@ -67,6 +68,7 @@ const LandingPageForm = () => {
       body: encode({
         'form-name': 'contact',
         email,
+        test,
         technology,
         project,
       }),
@@ -122,6 +124,20 @@ const LandingPageForm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Email Address"
+        ></input>
+      </div>
+      <div className="relative mb-8">
+        <input
+          name="test"
+          className={
+            error
+              ? "shadow-inner focus:outline-none focus:shadow-inner w-full bg-gray-400 pt-0 pb-0 pl-6 text-gray-300 placeholder:text-gray-300 text-base rounded-lg h-[4.25rem]"
+              : "focus:outline-none focus:shadow-inner w-full bg-gray-400 pt-0 pb-0 pl-6 text-gray-300 placeholder:text-gray-300 text-base rounded-lg h-[4.25rem]"
+          }
+          type="text"
+          value={test}
+          onChange={(e) => setTest(e.target.value)}
+          placeholder='Test'
         ></input>
       </div>
       <div
