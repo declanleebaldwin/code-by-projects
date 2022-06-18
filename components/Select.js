@@ -26,7 +26,7 @@ const Select = ({ items, selected, placeholder, onSelected }) => {
             : "relative flex items-center cursor-pointer w-full bg-gray-400 pt-0 pb-0 pl-6 text-gray-300 text-base rounded-lg h-[4.25rem]"
         }
       >
-        {selected ?? placeholder}
+        {!!selected ? selected :  placeholder}
         <div className="w-6 h-6 absolute right-6">
           <div className="relative w-full h-full">
             <Image

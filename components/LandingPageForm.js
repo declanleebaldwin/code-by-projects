@@ -92,12 +92,12 @@ const LandingPageForm = () => {
       <div className="text-gray-500 text-base mb-8">
         Sign up and we’ll email you your first ticket.
       </div>
-      {/* <Select
+      <Select
         items={technologies}
         selected={technology}
         onSelected={selectTechnology}
         placeholder="Technology"
-      /> */}
+      />
       {/* 
       {filteredProjects && (
         <Select
@@ -120,7 +120,6 @@ const LandingPageForm = () => {
           value={email}
           onChange={(e) => {
             setEmail(e.target.value)
-            setTechnology(e.target.value)
           }}
           placeholder="Email Address"
         ></input>
