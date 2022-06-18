@@ -67,7 +67,7 @@ const LandingPageForm = () => {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({
-        "form-name": 'home-page-form',
+        "form-name": e.target.getAttribute("name"),
         email,
         tech,
         technology,
@@ -81,15 +81,13 @@ const LandingPageForm = () => {
   return (
     <form
       name="contact"
-      method="popst"
+      method="post"
       className="flex flex-col pl-16 pr-16"
       data-netlify="true"
       ref={formRef}
       onSubmit={handleSubmit}
     >
-      <input type="hidden" name="form-name" value="home-page-form" />
-      <input type="hidden" name="technology" value={technology ?? ''} />
-      <input type="hidden" name="project" value={project ?? ''} />
+      <input type="hidden" name="form-name" value="homeContact" />
       <input
         type='hidden'
         name="tech" value={tech} />
