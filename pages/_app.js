@@ -55,6 +55,7 @@ const Layout = () => {
 
   return (
     <>
+      {showMenu && <div className="fixed top-0 left-0 w-full h-full bg-transparent" onClick={onCloseMenu}></div>}
       <div className='fixed top-0 right-0'>
         <div className='relative'>
           <div className="p-2 w-12 h-12 rounded-full mr-4 mt-4 cursor-pointer ease-in-out duration-150 hover:bg-gray-400" onClick={onClick}>
