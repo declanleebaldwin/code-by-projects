@@ -35,7 +35,7 @@ export const HOME_PAGE = {
   pricing: {
     title: 'pricing',
     bullets: [
-      'From £50/project.',
+      'From £20/project.',
       'Try your first ticket for free.',
       'Mentor session £50/hour.'
     ]
@@ -64,7 +64,7 @@ export const MENTOR_PAGE = {
   pricing: {
     title: 'pricing',
     bullets: [
-      'Code Reviews £25/ticket',
+      'Code Reviews £10/ticket',
       'Mentor session £50/hour ',
     ]
   },
@@ -150,7 +150,7 @@ export const PROJECTS = {
       pricing: {
         title: 'pricing',
         bullets: [
-          '£50 for entire Project, no hidden fees',
+          '£20 for entire Project, no hidden fees',
           'Mentor session £50/hour ',
         ]
       },
@@ -185,7 +185,7 @@ export const PROJECTS = {
       pricing: {
         title: 'pricing',
         bullets: [
-          '£50 for entire Project, no hidden fees',
+          '£20 for entire Project, no hidden fees',
           'Mentor session £50/hour ',
         ]
       },
