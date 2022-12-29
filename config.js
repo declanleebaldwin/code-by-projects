@@ -137,7 +137,7 @@ export const PROJECTS = {
           'Understanding the fundamentals of web development is vital for your progression so no frameworks or libraries will be allowed.'
         ],
         link: {
-          href: "https://enigmatic-anchorage-73371.herokuapp.com/",
+          href: "https://lozsleisure.web.app/#/",
           text: 'View Site.'
         }
       },
